@@ -1,0 +1,10 @@
+{
+	"new": {
+		"key_id": "VaultUnseal",
+		"hmac_key_id": "VaultHMAC"
+	},
+	"old": {
+		"key_id": "VaultHMAC",
+		"hmac_key_id": "VaultUnseal"
+	}
+}
