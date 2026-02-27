@@ -15,7 +15,8 @@ tasks:
   build:
     desc: Build the application
     cmds:
-      - cmd: go build -trimpath -ldflags='-s -w' -v -o {{.EXE}} .
+      - cmd: env GOSUMDB=off go mod tidy
+      - cmd: env CGO=1 go build -trimpath -ldflags='-s -w' -v -o {{.EXE}} .
     sources:
       - '**/*.go'
     generates:
