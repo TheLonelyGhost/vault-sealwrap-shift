@@ -1,0 +1,27 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  EXE: out/vault-sealwrap-shift{{exeExt}}
+
+tasks:
+  default:
+    desc: Build the application
+    aliases: [run]
+    cmds:
+      - task: build
+
+  build:
+    desc: Build the application
+    cmds:
+      - cmd: go build -trimpath -ldflags='-s -w' -v -o {{.EXE}} .
+    sources:
+      - '**/*.go'
+    generates:
+      - '{{.EXE}}'
+
+  clean:
+    desc: Clean every generated file
+    cmds:
+      - cmd: rm -f {{.EXE}}

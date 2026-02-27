@@ -1,1 +1,4 @@
 /vault.db
+/vault.db.bak
+/out/
+.task/
