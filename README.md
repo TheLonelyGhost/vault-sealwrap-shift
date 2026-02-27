@@ -1,5 +1,9 @@
 # Vault Sealwrap Shifter
 
+> [!warning]
+>
+> This tool is still under active development and should not be used on production systems. Use at your own peril!
+
 ## Context
 
 In a scorched-earth disaster recovery scenario featuring HashiCorp Vault, let's assume the following:
